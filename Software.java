@@ -1,19 +1,33 @@
 import java.io.*;
-import java.lang.*;
-import java.awt.BorderLayout;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Desktop;
 import java.awt.*;
-import java.awt.event.*;
+
 import javax.swing.*;
 import java.net.URI;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JTextArea;
+
+
+class GUIButton extends JButton{
+  /**
+   *
+   */
+  private static final long serialVersionUID = 1L;
+
+  public GUIButton(String text) {
+    super(text);
+    setBackground(new Color(43, 39, 39));
+    setForeground(new Color(255, 243, 133));
+    setFocusPainted(false);
+  }
+}
 
 public class Software{
+
 
   public static void main(String[] args) {
 
@@ -33,42 +47,15 @@ public class Software{
     f.setLocation(0,0);
     f.setLayout(new GridLayout(0, 4, 10, 15));
     UIManager.put("Button.select", new Color(43, 39, 39));
-    final JButton vibeViewButton = new JButton("VibeView");
-    vibeViewButton.setBackground(new Color(43, 39, 39));
-    vibeViewButton.setForeground(new Color(255, 243, 133));
-    vibeViewButton.setFocusPainted(false);
-    final JButton vibeReviewButton = new JButton("VibeReview");
-    vibeReviewButton.setBackground(new Color(43, 39, 39));
-    vibeReviewButton.setForeground(new Color(255, 243, 133));
-    vibeReviewButton.setFocusPainted(false);
-    final JButton sssConsoleButton = new JButton("SSS Console");
-    sssConsoleButton.setBackground(new Color(43, 39, 39));
-    sssConsoleButton.setForeground(new Color(255, 243, 133));
-    sssConsoleButton.setFocusPainted(false);
-    final JButton mfmDataConverterButton = new JButton("MFM for Flow Jig");
-    mfmDataConverterButton.setBackground(new Color(43, 39, 39));
-    mfmDataConverterButton.setForeground(new Color(255, 243, 133));
-    mfmDataConverterButton.setFocusPainted(false);
-    final JButton sssHMIButton = new JButton("SSS HMI Launch Window");
-    sssHMIButton.setBackground(new Color(43, 39, 39));
-    sssHMIButton.setForeground(new Color(255, 243, 133));
-    sssHMIButton.setFocusPainted(false);
-    final JButton excelMacrosButton = new JButton("Excel Programs");
-    excelMacrosButton.setBackground(new Color(43, 39, 39));
-    excelMacrosButton.setForeground(new Color(255, 243, 133));
-    excelMacrosButton.setFocusPainted(false);
-    final JButton aSiMonButton = new JButton("AS-iMon");
-    aSiMonButton.setBackground(new Color(43, 39, 39));
-    aSiMonButton.setForeground(new Color(255, 243, 133));
-    aSiMonButton.setFocusPainted(false);
-    final JButton stkConverterButton = new JButton("STK Data Converter");
-    stkConverterButton.setBackground(new Color(43, 39, 39));
-    stkConverterButton.setForeground(new Color(255, 243, 133));
-    stkConverterButton.setFocusPainted(false);
-    final JButton xGVisionButton = new JButton("XGVision Camera");
-    xGVisionButton.setBackground(new Color(43, 39, 39));
-    xGVisionButton.setForeground(new Color(255, 243, 133));
-    xGVisionButton.setFocusPainted(false);
+    final GUIButton vibeViewButton = new GUIButton("VibeView");
+    final GUIButton vibeReviewButton = new GUIButton("VibeReview");
+    final GUIButton sssConsoleButton = new GUIButton("SSS Console");
+    final GUIButton mfmDataConverterButton = new GUIButton("MFM for Flow Jig");
+    final GUIButton sssHMIButton = new GUIButton("SSS HMI Launch Window");
+    final GUIButton excelMacrosButton = new GUIButton("Excel Programs");
+    final GUIButton aSiMonButton = new GUIButton("AS-iMon");
+    final GUIButton stkConverterButton = new GUIButton("STK Data Converter");
+    final GUIButton xGVisionButton = new GUIButton("XGVision Camera");
     f.add(vibeViewButton);
     vibeViewButton.addActionListener(new ActionListener() {
 
